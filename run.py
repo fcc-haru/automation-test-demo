@@ -1,10 +1,10 @@
 # coding=utf-8
 import unittest, time, os 
 import sys
-sys.path.append(r'C:\Users\min.zhang\Desktop\rms-seleniumTest\rms')
+sys.path.append(r'C:\Users\min.zhang\Desktop\rms-autotest')
 from utils import HTMLTestRunner
    
-case_list = './rms/test_case'
+case_list = './test_case'
 
 def creatsuite():
     testunit = unittest.TestSuite()

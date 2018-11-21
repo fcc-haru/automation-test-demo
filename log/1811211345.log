@@ -1,0 +1,16 @@
+2018-11-21 13:45:25,295 - BasePage - INFO - Had find the element '  ' successful by id via value: name 
+2018-11-21 13:45:25,384 - BasePage - INFO - Had type ' rmstest01 ' in inputBox
+2018-11-21 13:45:25,421 - BasePage - INFO - Had find the element '  ' successful by id via value: password 
+2018-11-21 13:45:25,502 - BasePage - INFO - Had type ' Rmstest123 ' in inputBox
+2018-11-21 13:45:25,542 - BasePage - INFO - The element ' Login ' was clicked.
+2018-11-21 13:45:28,945 - BasePage - INFO - Had find the element '  ' successful by id via value: productNameFilterId 
+2018-11-21 13:45:29,072 - BasePage - INFO - Had type ' EXA-X1147 ' in inputBox
+2018-11-21 13:45:30,338 - BasePage - INFO - Had find the element ' EXA-X1147 ' successful by xpath via value: //*[@id="rmscomponent"]/app-rms-base/app-positions-browser/div/div/div[3]/table/tbody/tr[4]/td[3] 
+2018-11-21 13:45:30,340 - BasePage - INFO - Get text
+2018-11-21 13:45:30,766 - BasePage - INFO - The element '  ' was clicked.
+2018-11-21 13:45:33,580 - BasePage - INFO - Had find the element ' EOD ' successful by id via value: mat-radio-6 
+2018-11-21 13:45:33,596 - BasePage - INFO - The element ' EOD ' was clicked.
+2018-11-21 13:45:33,708 - BasePage - INFO - Had find the element '  ' successful by id via value: dataToday 
+2018-11-21 13:45:33,906 - BasePage - INFO - Had type ' 2018-11-08 ' in inputBox
+2018-11-21 13:45:34,361 - BasePage - INFO - Had find the element ' 2018-11-08 ' successful by xpath via value: //*[@id="rmscomponent"]/app-rms-base/app-global-trade-blotter/div/div/div[4]/table/tbody/tr[4]/td[6] 
+2018-11-21 13:45:34,363 - BasePage - INFO - Get text

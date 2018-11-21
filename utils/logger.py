@@ -2,7 +2,7 @@ import logging
 import os.path
 import time
 import sys
-sys.path.append(r"C:\Users\min.zhang\Desktop\rms-seleniumTest\rms")
+sys.path.append(r'C:\Users\min.zhang\Desktop\rms-autotest')
 from utils.config import LOG_PATH
 
 class Logger(object):

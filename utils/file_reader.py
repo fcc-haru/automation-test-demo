@@ -22,8 +22,7 @@ class YamlReader:
 
         return self._data
 
-if __name__ == '__main__':
-
-    y = 'C:\\Users\\min.zhang\\Desktop\\rms-seleniumTest\\rms\data\\config.yml'
-    reader = YamlReader(y)
-    print(reader.data)
+# if __name__ == '__main__':
+#     y = 'C:\\Users\\min.zhang\\Desktop\\rms-seleniumTest\\rms\data\\config.yml'
+#     reader = YamlReader(y)
+#     print(reader.data)

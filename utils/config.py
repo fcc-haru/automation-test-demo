@@ -7,6 +7,7 @@ DRIVER_PATH=os.path.join(BASE_PATH,'dirvers')
 REPORT_PATH=os.path.join(BASE_PATH,'report')
 LOG_PATH=os.path.join(BASE_PATH,'log')
 
+# get value in configData
 class Config:
     def __init__(self,config=CONFIG_PATH):
         print('config path:',config)

@@ -2,7 +2,7 @@
 import unittest,time
 from time import sleep
 import sys
-sys.path.append(r'C:\Users\min.zhang\Desktop\rms-seleniumTest\rms')
+sys.path.append(r'C:\Users\min.zhang\Desktop\rms-autotest')
 from common.browser import Browser
 from utils.config import Config
 from pageObject.login_page import LoginPage

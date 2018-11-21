@@ -4,7 +4,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 import os.path
 import sys
-sys.path.append(r"C:\Users\min.zhang\Desktop\rms-seleniumTest\rms")
+sys.path.append(r'C:\Users\min.zhang\Desktop\rms-autotest')
 from utils.logger import Logger
 from utils.config import DRIVER_PATH,REPORT_PATH
 
