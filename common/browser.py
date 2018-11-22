@@ -50,30 +50,6 @@ class Browser(object):
     def refresh_browser(self):
         self.browser.refresh()
 
-# class Browser(object):
-#     def __init__(self,browser_type="chrome"):
-#         self._type=browser_type.lower()
-#         if self._type in TYPES:
-#             browserObj=TYPES[self._type]
-#             self.browser=browserObj(EXECUTABLE_PATH[self._type])
-#         else:
-#             raise UnSupportBrowserTypeError('Just support %s!' % ','.join(TYPES.keys()))
-#         self.driver=None
-    
-#     def open_browser(self,url,maximiza_window=True,implicitly_wait=30):
-#         self.driver = self.browser
-#         self.driver.get(url)
-#         if maximiza_window:
-#             self.driver.maximize_window()
-#         self.driver.implicitly_wait(implicitly_wait)
-#         return self
-
-#     def close_browser(self):
-#         self.browser.close()
-
-#     def quit_browser(self):
-#         self.browser.quit()
-
 # if __name__ == '__main__':
 #     b=Browser()
 #     b.init_browser('chrome')
