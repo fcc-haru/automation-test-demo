@@ -1,4 +1,5 @@
 import sys
+import threading
 sys.path.append(r'C:\Users\min.zhang\Desktop\rms-autotest')
 import time,os
 from selenium import webdriver
@@ -15,7 +16,17 @@ class UnSupportBrowserTypeError(Exception):
     pass
 
 class Browser(object):
-    def __init__(self,browser_type="chrome"):
+    _instance_lock = threading.Lock()
+
+    def __init__(self):
+        pass
+    def __new__(cls, *args, **kwargs):
+        if not hasattr(Browser, "_instance"):
+            with Browser._instance_lock:
+                if not hasattr(Browser, "_instance"):
+                    Browser._instance = object.__new__(cls)  
+        return Browser._instance
+    def init_browser(self,browser_type="chrome"):
         self._type=browser_type.lower()
         if self._type in TYPES:
             browserObj=TYPES[self._type]
@@ -23,7 +34,6 @@ class Browser(object):
         else:
             raise UnSupportBrowserTypeError('Just support %s!' % ','.join(TYPES.keys()))
         self.driver=None
-    
     def open_browser(self,url,maximiza_window=True,implicitly_wait=30):
         self.driver = self.browser
         self.driver.get(url)
@@ -37,9 +47,36 @@ class Browser(object):
 
     def quit_browser(self):
         self.browser.quit()
+    def refresh_browser(self):
+        self.browser.refresh()
 
-if __name__ == '__main__':
-    b=Browser('chrome')
+# class Browser(object):
+#     def __init__(self,browser_type="chrome"):
+#         self._type=browser_type.lower()
+#         if self._type in TYPES:
+#             browserObj=TYPES[self._type]
+#             self.browser=browserObj(EXECUTABLE_PATH[self._type])
+#         else:
+#             raise UnSupportBrowserTypeError('Just support %s!' % ','.join(TYPES.keys()))
+#         self.driver=None
+    
+#     def open_browser(self,url,maximiza_window=True,implicitly_wait=30):
+#         self.driver = self.browser
+#         self.driver.get(url)
+#         if maximiza_window:
+#             self.driver.maximize_window()
+#         self.driver.implicitly_wait(implicitly_wait)
+#         return self
+
+#     def close_browser(self):
+#         self.browser.close()
+
+#     def quit_browser(self):
+#         self.browser.quit()
+
+# if __name__ == '__main__':
+#     b=Browser()
+#     b.init_browser('chrome')
     # test for baidu screenshot
     # b.get('https://www.baidu.com/')
     # b.save_screen_shot('test_baidu')

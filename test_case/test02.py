@@ -14,18 +14,21 @@ class testCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         # get url from configFile
+        # sleep(3)
         url =Config().get('dev01_url')
         # get browserName from configFile
         browserName=Config().get("browserName")
-        cls.browser= Browser(browserName)
-        cls.browser.open_browser(url)
+        cls.browser= Browser()
+        if cls.browser == None:
+            cls.browser.init_browser(browserName)
+            cls.browser.open_browser(url)
         cls.driver=cls.browser.driver
 
-    def test_login(self):
-        loginPage = LoginPage(self.driver)
-        loginPage.type_usermsg('rmstest01','Rmstest123')
-        loginPage.send_submit_btn()
-        sleep(3)
+    # def test_login(self):
+    #     loginPage = LoginPage(self.driver)
+    #     loginPage.type_usermsg('rmstest01','Rmstest123')
+    #     loginPage.send_submit_btn()
+    #     sleep(3)
         
     def test_select_tradeList(self):
         switchPage=SwitchPage(self.driver)
